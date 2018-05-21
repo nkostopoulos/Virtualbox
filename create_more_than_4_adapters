@@ -1,0 +1,11 @@
+VIRTUALBOX: enable more than 4 network adapters
+
+sudo VBoxManage registervm /home/nick/VirtualBox\ VMs/OVS/OVS.vbox        (name of VM is OVS)
+VBoxManage modifyvm "OVS" --nic5 intnet   (for internal networking)
+VBoxManage modifyvm "OVS" --intnet5 "LAN" (for internal network with name LAN)
+This was for interface 5. We can have 8 interfaces.
+
+ΠΡΟΣΟΧΗ:
+1) The last two commands must be executed from the directory of the Virtual Machine.
+
+2) Use without SUDO.
